@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder Form</title>
+    <link rel="stylesheet" href="./css/resume.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- Header -->
+      <header class="header">
+        <div>
+          <h1>Resume Builder</h1>
+          <p>Enter your details to prepare your resume.</p>
+        </div>
+
+        <span class="required-note"> <span>*</span> Required fields </span>
+      </header>
+
+      <!-- Objective Type Question -->
+      <form action="#" method="post" enctype="multipart/form-data">
+        <!-- Section 1: Personal Information -->
+        <section class="form-section">
+          <h2>1. Personal Information</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full Name <span>*</span></label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="jobTitle">Professional Title *</label>
+              <input
+                type="text"
+                id="jobTitle"
+                name="jobTitle"
+                required
+                placeholder="e.g. Software Developer"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="name@example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="Enter phone number"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="location">City / Location</label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="e.g. New Delhi, India"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="linkedin">LinkedIn Profile</label>
+              <input
+                type="url"
+                id="linkedin"
+                name="linkedin"
+                placeholder="https://linkedin.com/in/..."
+              />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="photo">Profile Photo</label>
+              <input type="file" id="photo" name="photo" accept="image/*" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Professional Summary -->
+        <section class="form-section">
+          <h2>2. Professional Summary</h2>
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="summary"> Career Objective / Summary * </label>
+              <textarea
+                id="summary"
+                name="summary"
+                required
+                placeholder="Write a brief summary of your experience, strengths, and career goals."
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Education -->
+        <section class="form-section">
+          <h2>3. Education</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="degree">Degree / Qualification *</label>
+              <input
+                type="text"
+                id="degree"
+                name="degree"
+                required
+                placeholder="e.g. B.Tech in Computer Science"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="institution">Institution *</label>
+              <input
+                type="text"
+                id="institution"
+                name="institution"
+                required
+                placeholder="College or university name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="graduationYear">Graduation Year</label>
+              <input
+                type="number"
+                id="graduationYear"
+                name="graduationYear"
+                min="1950"
+                max="2100"
+                placeholder="e.g. 2024"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="percentage">Percentage / CGPA</label>
+              <input
+                type="text"
+                id="percentage"
+                name="percentage"
+                placeholder="e.g. 85% or 8.5 CGPA"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Work Experience -->
+        <section class="form-section">
+          <h2>4. Work Experience</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Enter company name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="designation">Job Title</label>
+              <input
+                type="text"
+                id="designation"
+                name="designation"
+                placeholder="e.g. Senior Developer"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate" name="startDate" />
+            </div>
+
+            <div class="form-group">
+              <label for="endDate">End Date</label>
+              <input type="date" id="endDate" name="endDate" />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="responsibilities">
+                Responsibilities / Achievements
+              </label>
+              <textarea
+                id="responsibilities"
+                name="responsibilities"
+                placeholder="Describe your responsibilities, contributions, and achievements."
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Technical Skills -->
+        <section class="form-section">
+          <h2>5. Technical Skills</h2>
+
+          <div class="skills-list">
+            <div class="skill-item">
+              <input type="checkbox" id="java" name="skills" value="Java" />
+              <label for="java">Java</label>
+            </div>
+
+            <div class="skill-item">
+              <input type="checkbox" id="python" name="skills" value="Python" />
+              <label for="python">Python</label>
+            </div>
+
+            <div class="skill-item">
+              <input type="checkbox" id="html" name="skills" value="HTML" />
+              <label for="html">HTML</label>
+            </div>
+
+            <div class="skill-item">
+              <input type="checkbox" id="css" name="skills" value="CSS" />
+              <label for="css">CSS</label>
+            </div>
+
+            <div class="skill-item">
+              <input type="checkbox" id="sql" name="skills" value="SQL" />
+              <label for="sql">SQL</label>
+            </div>
+
+            <div class="skill-item">
+              <input
+                type="checkbox"
+                id="spring"
+                name="skills"
+                value="Spring Boot"
+              />
+              <label for="spring">Spring Boot</label>
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 20px">
+            <div class="form-group full-width">
+              <label for="otherSkills">Other Skills</label>
+              <textarea
+                id="otherSkills"
+                name="otherSkills"
+                placeholder="Enter additional skills, separated by commas."
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6: Projects -->
+        <section class="form-section">
+          <h2>6. Projects</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="projectName">Project Name</label>
+              <input
+                type="text"
+                id="projectName"
+                name="projectName"
+                placeholder="Enter project name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="projectTech">Technologies Used</label>
+              <input
+                type="text"
+                id="projectTech"
+                name="projectTech"
+                placeholder="e.g. Java, MySQL, Spring Boot"
+              />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="projectDescription"> Project Description </label>
+              <textarea
+                id="projectDescription"
+                name="projectDescription"
+                placeholder="Describe the purpose and features of your project."
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 7: Certifications -->
+        <section class="form-section">
+          <h2>7. Certifications & Achievements</h2>
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="certifications"> Certifications / Awards </label>
+              <textarea
+                id="certifications"
+                name="certifications"
+                placeholder="Enter certifications, awards, or achievements."
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Buttons using Flexbox -->
+        <div class="form-actions">
+          <button type="reset" class="btn btn-reset">Clear Form</button>
+
+          <button type="submit" class="btn btn-submit">
+            Submit Resume Details
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
